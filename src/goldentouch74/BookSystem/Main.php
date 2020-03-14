@@ -19,7 +19,7 @@ use pocketmine\command\{
 use jojoe77777\FormAPI\SimpleForm;
 use jojoe77777\FormAPI\CustomForm;
 
-use DaPigGuy\PiggyCustomEnchants\CustomEnchants\CustomEnchants;
+use DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants;
 
 class Main extends PluginBase implements Listener {
 
