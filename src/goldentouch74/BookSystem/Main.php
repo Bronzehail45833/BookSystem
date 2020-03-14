@@ -38,7 +38,7 @@ class Main extends PluginBase implements Listener {
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool{
         if ($sender instanceof Player) {
             $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-            if ($ce instanceof \DaPigGuy\PiggyCustomEnchants\Main) {
+            if ($ce instanceof \DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants) {
                 $form = new SimpleForm(function ($sender, $data){
                     if(!is_null($data)) $this->confirm($sender, $data);
                 });
