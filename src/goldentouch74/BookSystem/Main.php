@@ -100,10 +100,10 @@ class Main extends PluginBase implements Listener {
 
     public function confirm(Player $player, int $dataid): void{
         $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-        if ($ce instanceof \DaPigGuy\PiggyCustomEnchants\Main) {
+        if ($ce instanceof \DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants) {
             $form = new CustomForm(function (Player $player, $data) use ($dataid, $ce) {
                 if ($data !== null) {
-                    if ($ce instanceof \DaPigGuy\PiggyCustomEnchants\Main) {
+                    if ($ce instanceof \DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants) {
                         if ($player->getCurrentTotalXp() < $this->getCost($dataid)) {
                             $player->sendMessage(C::RED . "You don't have enough Exp!");
                             return;
@@ -128,7 +128,7 @@ class Main extends PluginBase implements Listener {
         $player = $e->getPlayer();
         $item = $e->getItem();
         $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-        if ($ce instanceof \DaPigGuy\PiggyCustomEnchants\Main) {
+        if ($ce instanceof \DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants) {
             if($item->getId() == 340){
                 if($item->getNamedTag()->hasTag("ceid", StringTag::class)) {
                     $e->setCancelled();
